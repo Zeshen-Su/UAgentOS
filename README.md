@@ -9,9 +9,9 @@ A minimalism Agent framework. Users can define custom scripts, and the Agent aut
 
 ## ⚙️ LLM Configuration
 
-To function, the agent requires access to LLM APIs. Both the `Brain` (for planning) and the `mini-agent` (for execution) need to be configured separately.
+The agent requires access to LLM APIs. Both the `Brain` (for planning) and the `mini-agent` (for execution) need to be configured separately.
 
-You must create an env file in the project's root directory with the following exact variable names, providing your own API details:
+You must create `.env` file in the project's root directory with the following exact variable names, providing your own API details:
 
 MINI_PROVIDER=' '
 MINI_MODEL_NAME=' '
