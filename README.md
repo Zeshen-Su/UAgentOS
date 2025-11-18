@@ -3,8 +3,8 @@ A minimalism Agent framework. Users can define custom scripts, and the Agent aut
 
 ## 🚀 Usage
 
-1.  **Define Your Tools**: Place your custom scripts in the `python_tools` directory.
-2.  **Declare Tools**: Inform the agent about the available tools by declaring them in the `agent.yaml` file.
+1.  **Define Your Tools**: Place your custom scripts in the `python_tools`.
+2.  **Declare Tools**: Inform the agent about the available tools by declaring them in the `agent.yaml`.
 3.  **Set Your Goal**: Modify the `user_request` variable in `mini.py` to define your task objective. The agent will then autonomously work to complete it.
 
 ## ⚙️ LLM Configuration
