@@ -8,8 +8,8 @@ An Agent framework that autonomously orchestrates custom tools and AI reasoning 
 3.  **Set Your Goal**: Modify the user_request variable in mini.py to define your task objective (Now you can directly input after 'python mini.py'). The agent will then autonomously plan and execute the necessary tool operations to achieve it.
 
 Understanding the Toolset-Tool Hierarchy:
-1.  A Toolset​ represents a functional domain (e.g., math), containing logically grouped operations
-2.  Individual Tools​ perform specific actions within that domain (e.g., add, subtract)
+1.  A Toolset represents a functional domain (e.g. math), containing logically grouped operations. This abstraction is designed to align with human thinking, making the organization of tools intuitive and user-centric.
+2.  Individual Tools​ perform specific actions within that domain (e.g. add, subtract)
 3.  The agent intelligently selects and orchestrates Tools from appropriate Toolsets to fulfill complex tasks, maintaining clear logical layering
 
 ## ⚙️ LLM Configuration
