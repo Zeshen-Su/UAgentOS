@@ -1,11 +1,16 @@
 # UAgentOS
-A minimalism Agent framework. Users can define custom scripts, and the Agent autonomously call them to fulfill tasks.
+An Agent framework that autonomously orchestrates custom tools and AI reasoning to accomplish complex tasks.
 
 ## 🚀 Usage
 
-1.  **Define Your Tools**: Place your custom scripts in the `python_tools`.
-2.  **Declare Tools**: Inform the agent about the available tools by declaring them in the `agent.yaml`.
-3.  **Set Your Goal**: Modify the `user_request` variable in `mini.py` to define your task objective. The agent will then autonomously work to complete it.
+1.  **Define Your Tools**: Create your custom scripts and place them in the toolsetdirectory. Each toolset should have a corresponding TOOL.mdfile describing its purpose and available functions. The framework automatically translates a toolset's meta-functions into actionable Tool classes for the AI agent. 
+2.  **Define Your Prompt**: The agent prompt is in the `agent.yaml`.
+3.  **Set Your Goal**: Modify the user_request variable in mini.pyto define your task objective. The agent will then autonomously plan and execute the necessary tool operations to achieve it.
+
+Understanding the Toolset-Tool Hierarchy:
+1.  A Toolset​ represents a functional domain (e.g., math), containing logically grouped operations
+2.  Individual Tools​ perform specific actions within that domain (e.g., add, subtract)
+3.  The agent intelligently selects and orchestrates Tools from appropriate Toolsets to fulfill complex tasks, maintaining clear logical layering
 
 ## ⚙️ LLM Configuration
 
