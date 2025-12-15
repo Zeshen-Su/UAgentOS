@@ -5,7 +5,7 @@ An Agent framework that autonomously orchestrates custom tools and AI reasoning 
 
 1.  **Define Your Tools**: Create your custom scripts and place them in the toolsetdirectory. Each toolset should have a corresponding TOOL.mdfile describing its purpose and available functions. The framework automatically translates a toolset's meta-functions into actionable Tool classes for the AI agent. 
 2.  **Define Your Prompt**: The agent prompt is in the `agent.yaml`.
-3.  **Set Your Goal**: Modify the user_request variable in mini.pyto define your task objective. The agent will then autonomously plan and execute the necessary tool operations to achieve it.
+3.  **Set Your Goal**: Modify the user_request variable in mini.py to define your task objective (Now you can directly input after 'python mini.py'). The agent will then autonomously plan and execute the necessary tool operations to achieve it.
 
 Understanding the Toolset-Tool Hierarchy:
 1.  A Toolset​ represents a functional domain (e.g., math), containing logically grouped operations
