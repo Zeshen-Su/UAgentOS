@@ -103,7 +103,6 @@ def _execute_tool(toolset: ToolSet, user_request: str, llm: LitellmModel) -> str
 
         # 稳健性要求：如果工具返回了原始数据，请用LLM对其进行格式化
         if "format" in user_request.lower() or "provide the answer" in user_request.lower():
-            print("DEBUG: Detected formatting request. Using LLM to format tool output...")
             final_prompt = MINI_CONFIG["tool_execution_user_template"].format(
                 user_request=user_request,
                 tool_name=tool_name,
@@ -145,7 +144,6 @@ def run_toolset(name: str, instruction: str) -> str:
                 
                 new_instruction = re.sub(r'\{([a-zA-Z_]\w*)\}', replacer, instruction)
                 if new_instruction != instruction:
-                    print(f"DEBUG: Detected un-interpolated variables. Auto-fixing instruction...")
                     instruction = new_instruction
     except Exception as e:
         print(f"DEBUG: Auto-interpolation failed: {e}")
@@ -215,7 +213,6 @@ def main() -> None:
             
         elif resp_type == "code":
             print("\nAgent: 正在执行任务...")
-            print(f"DEBUG: Generated Code:\n{'-'*20}\n{content}\n{'-'*20}")
             execution_context = {
                 "run_toolset": run_toolset,
                 "print": print,
